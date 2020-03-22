@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:bbq10_keyboard-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -24,28 +23,6 @@ F 2 "" H 5400 1750 50  0001 C CNN
 F 3 "" H 5400 1750 50  0001 C CNN
 	1    5400 1750
 	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+3.3V #PWR07
-U 1 1 5BF47659
-P 5400 1850
-F 0 "#PWR07" H 5400 1700 50  0001 C CNN
-F 1 "+3.3V" V 5400 2000 50  0000 L CNN
-F 2 "" H 5400 1850 50  0001 C CNN
-F 3 "" H 5400 1850 50  0001 C CNN
-	1    5400 1850
-	0    1    1    0   
-$EndComp
-$Comp
-L MCU_Microchip_SAMD:ATSAMD20E16A U2
-U 1 1 5BF4808D
-P 7300 4000
-F 0 "U2" H 7700 5250 50  0000 R CNN
-F 1 "ATSAMD20E16A" H 7300 2650 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm" H 8150 2500 50  0001 C CNN
-F 3 "" H 8150 2500 50  0001 C CNN
-	1    7300 4000
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	6800 2900 6750 2900
@@ -148,8 +125,6 @@ F 3 "~" H 6450 3200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6800 3850 6700 3850
-Wire Wire Line
-	6800 3950 6600 3950
 $Comp
 L Device:R_Small R2
 U 1 1 5BF4E0F3
@@ -164,8 +139,6 @@ $EndComp
 Wire Wire Line
 	6700 3800 6700 3850
 Connection ~ 6700 3850
-Wire Wire Line
-	6700 3850 6600 3850
 Wire Wire Line
 	6700 3600 6700 3550
 $Comp
@@ -209,8 +182,6 @@ Wire Wire Line
 Wire Wire Line
 	7800 4300 7850 4300
 Wire Wire Line
-	7800 4400 7850 4400
-Wire Wire Line
 	7800 4500 7850 4500
 Wire Wire Line
 	7800 4600 7850 4600
@@ -234,11 +205,11 @@ Text Label 7850 3900 0    50   ~ 0
 INT
 Text Label 7850 4000 0    50   ~ 0
 BL_CTRL
-Text Label 7850 4800 0    50   ~ 0
+Text Label 7850 4600 0    50   ~ 0
 ROW1
-Text Label 7850 4900 0    50   ~ 0
+Text Label 7850 4700 0    50   ~ 0
 COL1
-Text Label 7850 5000 0    50   ~ 0
+Text Label 7850 4800 0    50   ~ 0
 ROW2
 Text Label 7850 5100 0    50   ~ 0
 COL2
@@ -259,25 +230,14 @@ ROW6
 Text Label 7850 3600 0    50   ~ 0
 ROW7
 $Comp
-L Connector:TestPoint TP1
-U 1 1 5BF57B67
-P 6600 3850
-F 0 "TP1" V 6600 4100 50  0000 C CNN
-F 1 "TP_SWCLK" V 6704 3922 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6800 3850 50  0001 C CNN
-F 3 "~" H 6800 3850 50  0001 C CNN
-	1    6600 3850
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Connector:TestPoint TP2
 U 1 1 5BF58A34
-P 6600 3950
-F 0 "TP2" V 6600 4200 50  0000 C CNN
-F 1 "TP_SWDIO" V 6704 4022 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6800 3950 50  0001 C CNN
-F 3 "~" H 6800 3950 50  0001 C CNN
-	1    6600 3950
+P 9300 4400
+F 0 "TP2" V 9300 4650 50  0000 C CNN
+F 1 "TP_SWDIO" V 9404 4472 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 9500 4400 50  0001 C CNN
+F 3 "~" H 9500 4400 50  0001 C CNN
+	1    9300 4400
 	0    -1   -1   0   
 $EndComp
 Text Label 8700 3300 0    50   ~ 0
@@ -612,54 +572,6 @@ Wire Wire Line
 Wire Wire Line
 	7800 3600 7850 3600
 $Comp
-L power:+3.3V #PWR0101
-U 1 1 5BF25DC7
-P 6300 7400
-F 0 "#PWR0101" H 6300 7250 50  0001 C CNN
-F 1 "+3.3V" H 6300 7550 50  0000 C CNN
-F 2 "" H 6300 7400 50  0001 C CNN
-F 3 "" H 6300 7400 50  0001 C CNN
-	1    6300 7400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0102
-U 1 1 5BF26387
-P 6700 7500
-F 0 "#PWR0102" H 6700 7250 50  0001 C CNN
-F 1 "GND" H 6700 7350 50  0000 C CNN
-F 2 "" H 6700 7500 50  0001 C CNN
-F 3 "" H 6700 7500 50  0001 C CNN
-	1    6700 7500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 5BF26C7B
-P 6700 7400
-F 0 "#FLG0101" H 6700 7475 50  0001 C CNN
-F 1 "PWR_FLAG" H 6700 7550 50  0000 C CNN
-F 2 "" H 6700 7400 50  0001 C CNN
-F 3 "~" H 6700 7400 50  0001 C CNN
-	1    6700 7400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG0102
-U 1 1 5BF273BC
-P 6300 7500
-F 0 "#FLG0102" H 6300 7575 50  0001 C CNN
-F 1 "PWR_FLAG" H 6300 7650 50  0000 C CNN
-F 2 "" H 6300 7500 50  0001 C CNN
-F 3 "~" H 6300 7500 50  0001 C CNN
-	1    6300 7500
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6700 7400 6700 7500
-Wire Wire Line
-	6300 7500 6300 7400
-$Comp
 L power:+3.3V #PWR0103
 U 1 1 5BF3A1F6
 P 10100 2950
@@ -707,13 +619,303 @@ F 3 "~" H 10600 3000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10400 3000 10400 3200
-Text Label 7850 4700 0    50   ~ 0
+Text Label 7850 4300 0    50   ~ 0
 UART_TX
-NoConn ~ 7850 4100
-NoConn ~ 7850 4200
-NoConn ~ 7850 4300
-NoConn ~ 7850 4400
-NoConn ~ 7850 4500
-NoConn ~ 7850 4600
 NoConn ~ 7850 5200
+$Comp
+L mylib:Groveconn4 J3
+U 1 1 5E76841B
+P 7550 1900
+F 0 "J3" H 7817 1213 60  0000 C CNN
+F 1 "Groveconn4" H 7817 1319 60  0000 C CNN
+F 2 "Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical" H 7550 1900 60  0001 C CNN
+F 3 "" H 7550 1900 60  0001 C CNN
+	1    7550 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_ARM_JTAG_SWD_10 J4
+U 1 1 5E77005A
+P 9600 5500
+F 0 "J4" H 9157 5546 50  0000 R CNN
+F 1 "Conn_ARM_JTAG_SWD_10" H 9157 5455 50  0000 R CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD" H 9600 5500 50  0001 C CNN
+F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 9250 4250 50  0001 C CNN
+	1    9600 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro J2
+U 1 1 5E771877
+P 9300 1750
+F 0 "J2" H 9357 2217 50  0000 C CNN
+F 1 "USB_B_Micro" H 9357 2126 50  0000 C CNN
+F 2 "library:USB_Micro-B_Molex_47346-0001" H 9450 1700 50  0001 C CNN
+F 3 "~" H 9450 1700 50  0001 C CNN
+	1    9300 1750
+	1    0    0    -1  
+$EndComp
+Text Label 7550 1450 0    50   ~ 0
+SCL
+Text Label 7550 1550 0    50   ~ 0
+SDA
+$Comp
+L power:GND #PWR07
+U 1 1 5E7741AE
+P 7550 1750
+F 0 "#PWR07" H 7550 1500 50  0001 C CNN
+F 1 "GND" V 7555 1622 50  0000 R CNN
+F 2 "" H 7550 1750 50  0001 C CNN
+F 3 "" H 7550 1750 50  0001 C CNN
+	1    7550 1750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR017
+U 1 1 5E77D20F
+P 7550 1650
+F 0 "#PWR017" H 7550 1500 50  0001 C CNN
+F 1 "+3.3V" V 7565 1778 50  0000 L CNN
+F 2 "" H 7550 1650 50  0001 C CNN
+F 3 "" H 7550 1650 50  0001 C CNN
+	1    7550 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L Regulator_Linear:AP2112K-3.3 U3
+U 1 1 5E7C308D
+P 3550 5800
+F 0 "U3" H 3550 6142 50  0000 C CNN
+F 1 "AP2112K-3.3" H 3550 6051 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 3550 6125 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AP2112.pdf" H 3550 5900 50  0001 C CNN
+	1    3550 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 1550 9900 1550
+$Comp
+L Device:R_Small R6
+U 1 1 5E7D12AC
+P 3150 5800
+F 0 "R6" V 3350 5850 50  0000 R CNN
+F 1 "10K" V 3250 5900 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3150 5800 50  0001 C CNN
+F 3 "~" H 3150 5800 50  0001 C CNN
+	1    3150 5800
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	2850 5700 2950 5700
+Wire Wire Line
+	3050 5800 2950 5800
+Wire Wire Line
+	2950 5800 2950 5700
+Connection ~ 2950 5700
+Wire Wire Line
+	2950 5700 3250 5700
+$Comp
+L power:GND #PWR021
+U 1 1 5E7DD77B
+P 3550 6100
+F 0 "#PWR021" H 3550 5850 50  0001 C CNN
+F 1 "GND" H 3555 5927 50  0000 C CNN
+F 2 "" H 3550 6100 50  0001 C CNN
+F 3 "" H 3550 6100 50  0001 C CNN
+	1    3550 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 5E7DE377
+P 9300 2150
+F 0 "#PWR018" H 9300 1900 50  0001 C CNN
+F 1 "GND" H 9305 1977 50  0000 C CNN
+F 2 "" H 9300 2150 50  0001 C CNN
+F 3 "" H 9300 2150 50  0001 C CNN
+	1    9300 2150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9600 1950
+NoConn ~ 9200 2150
+$Comp
+L power:GND #PWR019
+U 1 1 5E7E6161
+P 9600 6250
+F 0 "#PWR019" H 9600 6000 50  0001 C CNN
+F 1 "GND" H 9605 6077 50  0000 C CNN
+F 2 "" H 9600 6250 50  0001 C CNN
+F 3 "" H 9600 6250 50  0001 C CNN
+	1    9600 6250
+	1    0    0    -1  
+$EndComp
+NoConn ~ 10100 5700
+Text GLabel 4300 5700 2    50   Input ~ 0
+VCC
+Text GLabel 9900 1550 2    50   Input ~ 0
+VIN
+Text GLabel 2850 5700 0    50   Input ~ 0
+VIN
+Text GLabel 5400 1850 2    50   Input ~ 0
+VIN
+Wire Wire Line
+	3850 5700 4050 5700
+$Comp
+L power:+3.3V #PWR020
+U 1 1 5E8191AA
+P 4050 5550
+F 0 "#PWR020" H 4050 5400 50  0001 C CNN
+F 1 "+3.3V" H 4065 5723 50  0000 C CNN
+F 2 "" H 4050 5550 50  0001 C CNN
+F 3 "" H 4050 5550 50  0001 C CNN
+	1    4050 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 5550 4050 5700
+Connection ~ 4050 5700
+Wire Wire Line
+	4050 5700 4300 5700
+Text GLabel 9700 4700 2    50   Input ~ 0
+VCC
+Wire Wire Line
+	9600 4900 9600 4700
+Wire Wire Line
+	9600 4700 9700 4700
+Text Label 10300 5200 0    50   ~ 0
+~RESET~
+Wire Wire Line
+	10100 5200 10300 5200
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5BF57B67
+P 9300 4250
+F 0 "TP1" V 9300 4500 50  0000 C CNN
+F 1 "TP_SWCLK" V 9404 4322 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 9500 4250 50  0001 C CNN
+F 3 "~" H 9500 4250 50  0001 C CNN
+	1    9300 4250
+	0    -1   -1   0   
+$EndComp
+Text GLabel 6250 3850 0    50   Input ~ 0
+SWCLK
+Text GLabel 6250 3950 0    50   Input ~ 0
+SWDIO
+Wire Wire Line
+	6250 3850 6700 3850
+Wire Wire Line
+	6250 3950 6800 3950
+Text GLabel 9550 4250 2    50   Input ~ 0
+SWCLK
+Text GLabel 9550 4400 2    50   Input ~ 0
+SWDIO
+Wire Wire Line
+	9300 4250 9550 4250
+Wire Wire Line
+	9300 4400 9550 4400
+Text GLabel 10300 5400 2    50   Input ~ 0
+SWCLK
+Text GLabel 10300 5500 2    50   Input ~ 0
+SWDIO
+Wire Wire Line
+	10100 5400 10300 5400
+Wire Wire Line
+	10100 5500 10300 5500
+NoConn ~ 10100 5600
+$Comp
+L MCU_Microchip_SAMD:ATSAMD20E17A U2
+U 1 1 5E88B20C
+P 7300 4000
+F 0 "U2" H 7300 5365 50  0000 C CNN
+F 1 "ATSAMD20E17A" H 7300 5274 50  0000 C CNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 8150 2500 50  0001 C CNN
+F 3 "" H 8150 2500 50  0001 C CNN
+	1    7300 4000
+	1    0    0    -1  
+$EndComp
+Text GLabel 7850 5000 2    50   Input ~ 0
+DP
+Text GLabel 7850 4900 2    50   Input ~ 0
+DM
+Text GLabel 9900 1850 2    50   Input ~ 0
+DM
+Text GLabel 9900 1750 2    50   Input ~ 0
+DP
+Wire Wire Line
+	9600 1750 9900 1750
+Wire Wire Line
+	9900 1850 9600 1850
+Wire Wire Line
+	7800 4400 7850 4400
+Text GLabel 7850 4400 2    50   Input ~ 0
+UART_RX
+$Comp
+L Connector:TestPoint TP6
+U 1 1 5EA18F03
+P 9300 4100
+F 0 "TP6" V 9300 4300 50  0000 L CNN
+F 1 "UART_TX" H 9350 4200 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 9500 4100 50  0001 C CNN
+F 3 "~" H 9500 4100 50  0001 C CNN
+	1    9300 4100
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9550 4100 2    50   Input ~ 0
+UART_RX
+Wire Wire Line
+	9300 4100 9550 4100
+$Comp
+L Connector:TestPoint TP9
+U 1 1 5EA3E078
+P 9300 3950
+F 0 "TP9" V 9300 4150 50  0000 L CNN
+F 1 "UART_TX" H 9350 4050 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 9500 3950 50  0001 C CNN
+F 3 "~" H 9500 3950 50  0001 C CNN
+	1    9300 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP8
+U 1 1 5EA3E73D
+P 9300 3800
+F 0 "TP8" V 9300 4000 50  0000 L CNN
+F 1 "UART_TX" H 9350 3900 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 9500 3800 50  0001 C CNN
+F 3 "~" H 9500 3800 50  0001 C CNN
+	1    9300 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP7
+U 1 1 5EA3EA9A
+P 9300 3650
+F 0 "TP7" V 9300 3850 50  0000 L CNN
+F 1 "UART_TX" H 9350 3750 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 9500 3650 50  0001 C CNN
+F 3 "~" H 9500 3650 50  0001 C CNN
+	1    9300 3650
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9550 3650 2    50   Input ~ 0
+GPIO0
+Text GLabel 9550 3800 2    50   Input ~ 0
+GPIO1
+Text GLabel 9550 3950 2    50   Input ~ 0
+GPIO2
+Text GLabel 7850 4100 2    50   Input ~ 0
+GPIO0
+Text GLabel 7850 4200 2    50   Input ~ 0
+GPIO1
+Text GLabel 7850 4500 2    50   Input ~ 0
+GPIO2
+Wire Wire Line
+	9300 3650 9550 3650
+Wire Wire Line
+	9300 3800 9550 3800
+Wire Wire Line
+	9300 3950 9550 3950
+Wire Wire Line
+	9600 6100 9600 6250
+NoConn ~ 9500 6100
 $EndSCHEMATC
